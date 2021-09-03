@@ -23,3 +23,14 @@ export const getPost = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const createPost = async (req, res) => {
+  try {
+    const post = new Post(req.body)
+    await post.save()
+    res.status(201).json(post)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message })
+  }
+}
