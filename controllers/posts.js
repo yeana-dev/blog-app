@@ -10,7 +10,7 @@ export const getPosts = async (req, res) => {
   }
 };
 
-export const getPosts = async (req, res) => {
+export const getPost = async (req, res) => {
   try {
     const { id } = req.params
     const post = await Post.findById(id)
