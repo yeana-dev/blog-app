@@ -1,14 +1,14 @@
-import PostCards from '../../components/PostCards/PostCards'
-import Layout from '../../components/Layout/Layout'
+import PostCard from "../../components/PostCard/PostCard";
+import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
   return (
     <Layout>
       <div className="home">
-        <PostCards />
+        <PostCard />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

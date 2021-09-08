@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./PostEdit.css";
 import { useParams, Redirect } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import { getPost, updatePost } from "../../services/products";
+import { getPost, updatePost } from "../../services/posts";
 
 const PostEdit = (props) => {
   const [post, setPost] = useState({
@@ -14,7 +14,7 @@ const PostEdit = (props) => {
   });
 
   const [isUpdated, setUpdated] = useState(false);
-  let { id } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchPost = async () => {

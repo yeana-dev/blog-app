@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./PostCreate.css";
 import Layout from "../../components/Layout/Layout";
 import { Redirect } from "react-router-dom";
-import { createPost } from "../../services/products";
+import { createPost } from "../../services/posts";
 
 const PostCreate = (props) => {
   const [post, setPost] = useState({
